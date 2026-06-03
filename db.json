@@ -1,5 +1,35 @@
 {
   "todos": [
-    { "id": 1, "title": "Learn NgRx", "completed": false }
-  ]
+    {
+      "title": "test vahid",
+      "completed": false,
+      "id": "1"
+    },
+    {
+      "title": "test",
+      "completed": false,
+      "id": "Orh_4KIDszo"
+    },
+    {
+      "title": "test2",
+      "completed": false,
+      "id": "HDLCtHaaGAQ"
+    },
+    {
+      "title": "test2",
+      "completed": false,
+      "id": "_cMACb-FcvU"
+    },
+    {
+      "title": "test2",
+      "completed": false,
+      "id": "2E6OMhFBuM8"
+    },
+    {
+      "title": "test2",
+      "completed": false,
+      "id": "JbvJTiU3fKU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

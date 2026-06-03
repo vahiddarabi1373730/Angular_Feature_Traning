@@ -1,0 +1,21 @@
+@if (loading$ | async;as loading){
+  <p>loading...</p>
+}@else{
+  @if (error$ | async;as error){
+    <p>{{error}}</p>
+  }@else{
+    @if (items$ | async;as todos){
+      @for (todo of todos;track todo.id){
+        <div style="display: flex;gap: 8px">
+          <p>{{todo.id}}</p>
+          <p>{{todo.title}}</p>
+        </div>
+      }
+    }
+  }
+
+
+}
+
+<button (click)="addTodo()">Add Todo</button>
+<button (click)="updateTodo()">Update Todo</button>
