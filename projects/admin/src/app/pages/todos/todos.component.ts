@@ -4,10 +4,8 @@ import {
   selectErrorState,
   selectItemsState,
   selectLoadingState,
-  selectTodoState,
-  Todo,
   TodoActions
-} from '../models/todo-models';
+} from '../../models/todo-models';
 import {Store} from '@ngrx/store';
 import {AsyncPipe} from '@angular/common';
 

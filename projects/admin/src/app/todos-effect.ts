@@ -14,7 +14,6 @@ export class TodosEffect {
   loadTodos$=createEffect(()=>this.actions$.pipe(
     ofType(TodoActions.loadTodos),
     switchMap(()=>this.todoService.getAll().pipe(
-      tap((todos)=>console.log(todos)),
       map((todos)=>TodoActions.loadTodosSuccess({todos})),
       catchError((error)=>of(TodoActions.loadTodosFaild({error})))
     ))

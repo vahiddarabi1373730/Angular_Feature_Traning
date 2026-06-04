@@ -1,0 +1,22 @@
+@if(loading$ | async){
+  <h1>در حال بارگزاری...</h1>
+}
+
+@if(error$ | async ;as error){
+  <p style="color:red">{{error}}</p>
+}
+@if (users$ | async;as users){
+  @for(user of users;track user.id){
+    <div style="display: flex;gap:8px">
+      <p>{{user.id}}</p>
+      <p>{{user.firstName}}</p>
+      <p>{{user.isAdmin}}</p>
+      <p>{{user.mobile}}</p>
+      <p>{{user.name}}</p>
+    </div>
+  }
+}
+
+
+<button (click)="addUser()">Add Todo</button>
+<button (click)="updateUser()">Update Todo</button>
