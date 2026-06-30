@@ -1,0 +1,79 @@
+<!--/////////////////////////////////////////////////////////////////withLinkedState,withProps-->
+<!--@if (user$ | async;as user){-->
+<!--  @if (user){-->
+<!--    <h3>{{user.firstName}}</h3>-->
+<!--  }-->
+<!--}-->
+
+
+
+<!--/////////////////////////////////////////////////////////////////linkedSignal-->
+<!--<h1>{{linkedSignal.selectedUser()?.firstName}}</h1>-->
+<!--<select>-->
+<!--  @for (op of users();track op.id){-->
+<!--    <option [value]="op.id" [selected]="linkedSignal.selectedUser()?.id===op.id">{{op.firstName}}</option>-->
+<!--  }-->
+<!--</select>-->
+<!--<button (click)="onCallLinkedSignal()">CallLinkedSignal</button>-->
+
+
+
+
+<!--/////////////////////////////////////////////////////////////////getState-->
+<!--@for (user of users();track user.id){-->
+<!--  @if (user){-->
+<!--    <h3>{{user.firstName}}</h3>-->
+<!--  }-->
+<!--}-->
+<!--<button (click)="onCallLinkedSignal()">CallLinkedSignal</button>-->
+
+
+
+
+
+
+
+<!--/////////////////////////////////////////////////////////////////withStoreFeature-->
+
+<!--@if (users$ | async;as users){-->
+<!--  @if(users){-->
+<!--    @for (user of users;track user.id){-->
+<!--      <h1>{{user.firstName}}</h1>-->
+<!--    }-->
+<!--  }-->
+<!--}-->
+
+
+
+
+
+<!--/////////////////////////////////////////////////////////////////withEntity-->
+<!--@for (user of users();track user.id){-->
+<!--  @if (user){-->
+<!--    <h3>{{user.firstName}}</h3>-->
+<!--  }-->
+<!--}-->
+<!--<button (click)="addUser()">Add</button>-->
+<!--<button (click)="prependUser()">Prepend</button>-->
+<!--<button (click)="updateUser()">Update</button>-->
+<!--<button (click)="deleteUser()">Delete</button>-->
+
+
+
+<!--/////////////////////////////////////////////////////////////////Events-->
+@for (user of users();track user.id){
+  @if (user){
+    <h3>{{user.firstName}}</h3>
+  }
+}
+<input (input)="onInputChange($event)" placeholder="firstName"/>
+<input (input)="onInputEmailChange($event)" placeholder="email"/>
+<button (click)="addUser()">Add User</button>
+
+
+<!--/////////////////////////////////////////////////////////////////ElementaryTopicStore-->
+<!--@for (user of users();track user.id){-->
+<!--  @if (user){-->
+<!--    <h3>{{user.firstName}}</h3>-->
+<!--  }-->
+<!--}-->
