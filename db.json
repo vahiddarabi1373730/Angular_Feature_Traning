@@ -1,5 +1,28 @@
 {
   "todos": [
-    { "id": 1, "title": "Learn NgRx", "completed": false }
-  ]
+    {
+      "title": "aa",
+      "completed": false,
+      "id": "A5cs_9EeXBM"
+    },
+    {
+      "id": "lyD87HDHqQw",
+      "completed": false,
+      "title": "test2"
+    }
+  ],
+  "users": [
+    {
+      "firstName": "vahid",
+      "email": "db.vahid1373@gmial.com",
+      "id": "1",
+      "isAdmin": true
+    },
+    {
+      "email": "test",
+      "firstName": "maryam",
+      "id": "OyaqzoZDKvw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
